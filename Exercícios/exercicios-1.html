@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Meu portal de notícias</title>
+ <style>
+  *{
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+  }
+  body > header {
+   background-color: #2f3640;
+   padding: 16px 10px;
+   color: #f5f6fa;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+  }
+  article {
+   width: 300px;
+  }
+  header li {
+   display: inline;
+   font-family: Arial, Helvetica, sans-serif;
+   font-weight: bold;
+   margin-left: 16px;
+  }
+  header li a {
+   color: #f5f6fa;
+   text-decoration: none;
+  }
+  .container {
+   width: 1366px;
+   margin: 0 auto;
+  }
+  .articles {
+   display: flex;
+   flex-wrap: wrap;
+  }
+  article img {
+   width: 100%;
+  }
+  .articles article {
+   width: 30%;
+  }
+  section {
+   padding: 16px 0;
+  }
+  section h2, .articles article {
+   margin-bottom: 16px;
+  }
+  .container {
+   display: flex;
+   flex-wrap: wrap;
+  }
+  .container article {
+   margin-right: 20px;
+  }
+  .articles article h3 {
+   margin-top: 8px;
+   margin-bottom: 8px;
+  }
+  .articles article a {
+   background-color: blue;
+   color: #fff;
+   padding: 8px;
+   display: inline-block;
+   text-decoration: none;
+   font-weight: bold;
+   margin-top: 8px;
+  }
+  .articles article a:hover {
+   text-decoration: underline;
+  }
+  .articles article p, .articles article a {
+   font-family: Arial, Helvetica, sans-serif;
+  }
+  .articles article h3 {
+   font-size: 24px;
+  }
+  section h2 {
+   font-size: 32px;
+  }
+  #sports {
+   background-color: rgba(0,255,0,0.1);
+  }
+  #sports .articles article a {
+   background-color: #009432;
+  }
+  #economy {
+   background-color: #f8f59f;
+  }
+  #economy .articles article a {
+   background-color: #ff9f1a;
+  }
+  #technology {
+   background-color: rgba(0, 0, 255, 0.25)
+  }
+  #entertainment {
+   background-color: rgba(255,0,0,0.25);
+  }
+  #entertainment .articles article a {
+   background-color: rgba(255,0,0,1);
+  }
+ </style>
+</head>
+<body>
+ <header>
+  <h1>Meu portal de notícias</h1>
+  <nav>
+   <ul>
+    <li>
+     <a href='#sports' title="Ir para a seção de esportes">Esportes</a>
+    </li>
+    <li>
+     <a href="#economy" title="Ir para a seção de notícias">Economia</a>
+    </li>
+    <li>
+     <a href="#entertainment" title="Ir para a seção de notícias">Entretenimento</a>
+    </li>
+    <li>
+     <a href="#technology" title="Ir para a seção de notícias">Tecnologia</a>
+    </li>
+   </ul>
+  </nav>
+ </header>
+ <section id="sports">
+  <div class="container">
+   <h2>Esportes</h2>
+   <div class="articles">
+    <article>
+     <img src="./arquivos/futebol.jpg" alt="Bola de futebol no gramado">
+     <header>
+      <time>13/07/2022 às 12:35</time>
+     </header>
+     <h3>Grande clássico na noite de hoje.</h3>
+     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum eligendi possimus ipsa id iusto eaque et asperiores amet nesciunt, fugit ratione nisi esse cupiditate repellat, at voluptates quibusdam! Fuga, ab.</p>
+     <a href="#" title="Leia a notícia completa">Ler mais</a>
+    </article>
+    <article>
+     <img src="./arquivos/americano.jpg" alt="Jogador de futebol americano correndo">
+     <header>
+      <time>13/07/2022 às 12:35</time>
+     </header>
+     <h3>Noite do Superbowl</h3>
+     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore quam ut illum cum similique saepe expedita veniam maiores, nostrum architecto placeat fugit aperiam delectus iusto veritatis fuga dolores aut maxime?</p>
+     <a href="#" title="Leia a notícia completa">Ler mais</a>
+    </article>
+    <article>
+     <img src="./arquivos/basquete.jpg" alt="Vista aérea de uma quadra de basquete">
+     <header>
+      <time>13/07/2022 às 12:35</time>
+     </header>
+     <h3>Notícias sobre a NBA</h3>
+     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam inventore a nemo ducimus, tempore corporis assumenda error eum totam ea fuga numquam libero obcaecati nobis temporibus! Explicabo fugit dolorem nihil.</p>
+     <a href="#" title="Leia a notícia completa">Ler mais</a>
+    </article>
+   </div>
+  </div>
+ </section>
+ <section id="economy">
+  <div class="container">
+   <h2>Economia</h2>
+   <div class="articles">
+    <article>
+     <img src="./arquivos/dolar.jpg" alt="Muitos dólares">
+     <header>
+      <time>13/07/2022 às 12:35</time>
+     </header>
+     <h3>Dólar em alta de 0.50%</h3>
+     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates voluptatem perspiciatis iusto veniam, dolorum totam modi at excepturi veritatis facere incidunt, sunt deserunt fuga eveniet aut expedita perferendis ex deleniti.</p>
+     <a href="#" title="Leia a notícias completa">Ler mais</a>
+    </article>
+    <article>
+     <img src="./arquivos/euro.jpg" alt="Várias notas de euro">
+     <header>
+      <time>13/07/2022 às 12:35</time>
+     </header>
+     <h3>Euro em queda de 0.40%</h3>
+     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem rem tempora fugiat molestiae aut id, sed minima adipisci rerum eum assumenda quis est at similique, nemo in illo pariatur cum!</p>
+     <a href="#" title="Leia a notícias completa">Ler mais</a>
+    </article>
+    <article>
+     <img src="./arquivos/petroleo.jpg" alt="Extração de petróleo">
+     <header>
+      <time>13/07/2022 às 12:35</time>
+     </header>
+     <h3>Alta no preço do barril do petróleo</h3>
+     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum facilis animi molestias facere suscipit doloremque. Eaque dolore hic veritatis distinctio voluptatum, illum quidem ratione minus ipsam ipsum adipisci fuga soluta!</p>
+     <a href="#" title="Leia a notícias completa">Ler mais</a>
+    </article>
+   </div>
+  </div>
+ </section>
+ <section id="entertainment">
+  <div class="container">
+   <h2>Entretenimento</h2>
+   <div class="articles">
+    <article>
+     <img src="./arquivos/1.avif" alt="Sul Global">
+     <header>
+      <time>13/07/2022 às 12:35</time>
+     </header>
+     <h3>Sul global é a grande estrela da Bienal de Veneza; veja FOTOS das exposições</h3>
+     <p>Inclusivo, evento trouxe 331 artistas, muitos deles marginalizados, outsiders, homossexuais e indígenas, que arrancaram elogios do público e da crítica.</p>
+     <a href="#" title="Leia a notícias completa">Ler mais</a>
+    </article>
+    <article>
+     <img src="./arquivos/2.avif" alt="Francesa">
+     <header>
+      <time>13/07/2022 às 12:35</time>
+     </header>
+     <h3>Francesa é eleita fotógrafa do ano com ensaio sobre esterilização forçada de comunidade esquimó na Groenlândia</h3>
+     <p>Juliette Pavy recebeu o prêmio principal do Sony World Photography Awards, promovido pela Organização Mundial de Fotografia. Veja outras fotos de ensaios vencedores por tema.</p>
+     <a href="#" title="Leia a notícias completa">Ler mais</a>
+    </article>
+    <article>
+     <img src="./arquivos/3.webp" alt="Wagner Moura">
+     <header>
+      <time>13/07/2022 às 12:35</time>
+     </header>
+     <h3>Wagner Moura toma os EUA de assalto com 'Guerra Civil'; relembre atores brasileiros em Hollywood</h3>
+     <p>Ator conquista seu primeiro protagonista em uma grande produção americana, e consolida onda de atores nacionais tentando a sorte nos Estados Unidos.</p>
+     <a href="#" title="Leia a notícias completa">Ler mais</a>
+    </article>
+   </div>
+  </div>
+ </section>
+ <section id="technology">
+  <div class="container">
+   <h2>Tecnologia</h2>
+   <div class="articles">
+    <article>
+     <img src="./arquivos/musk.jpg" alt="Elon Musk">
+     <header>
+      <time>13/07/2022 às 12:35</time>
+     </header>
+     <h3>Elon Musk demite cerca de 14 mil funcionários da Tesla para reduzir custos.</h3>
+     <p>10% dos trabalhadores da Tesla serão afetados pelos cortes. Elon Musk escreveu carta justificando as demissões; veja!</p>
+     <a href="#" title="Leia a notícias completa">Ler mais</a>
+    </article>
+    <article>
+     <img src="./arquivos/motorola.jpg" alt="Edge 50">
+     <header>
+      <time>13/07/2022 às 12:35</time>
+     </header>
+     <h3>Motorola anuncia Edge 50 com a melhor câmera que já fez e versão em madeira.</h3>
+     <p>novos Motorola Edge 50 Fusion, Edge 50 Pro e Edge 50 Ultra trazem uma série de boas novidades; confira todos os detalhes.</p>
+     <a href="#" title="Leia a notícias completa">Ler mais</a>
+    </article>
+    <article>
+     <img src="./arquivos/galaxy.jpg" alt="Galaxy Book 4 Ultra">
+     <header>
+      <time>13/07/2022 às 12:35</time>
+     </header>
+     <h3>Samsung lança no Brasil notebooks da linha Galaxy Book 4 com chip Intel Core Ultra.</h3>
+     <p>Samsung lançou no país o Galaxy Book 4 Ultra, Galaxy Book 4 Pro e Galaxy Book 4 Pro 360; veja as configurações e preços!</p>
+     <a href="#" title="Leia a notícias completa">Ler mais</a>
+    </article>
+   </div>
+  </div>
+ </section>
+</body>
+</html>
