@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Calculadora de Médias</title>
+ <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+ <style>
+  .content {
+   font-family: "Roboto", sans-serif;
+   background-color: lightgrey;
+   color: black;
+   height: 100vh;
+   padding-top: 100px;
+  }
+  .content header {
+   display: flex;
+   align-items: center;
+  }
+  .content header img {
+   height: 36px;
+   margin-right: 15px;
+  }
+  .container {
+   max-width: 960px;
+   width: 100%;
+   margin: 0 auto;
+  }
+  form button {
+   background-color: green;
+   color: white;
+   font-size: 24px;
+   font-weight: bold;
+   border: none;
+   cursor: pointer;
+   padding: 8px;
+  }
+  form input {
+   font-size: 24px;
+   background-color: white;
+   border: none;
+   border-bottom: 2px solid black;
+   padding: 8px;
+  }
+  form {
+   display: flex;
+   max-width: 640px;
+   width: 100%;
+   justify-content: space-between;
+   padding: 10px 0;
+  }
+  table th {
+   border-bottom: 2px solid black;
+   padding: 16px;
+   font-size: 24px;
+   font-weight: bold;
+  }
+  table {
+   width: 100%;
+  }
+  table td {
+   padding: 16px 0;
+   text-align: center;
+   font-size: 18px;
+   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  table td img {
+   height: 30px;
+  }
+  .resultado {
+   padding: 8px;
+   font-weight: bold;
+   color: white;
+   background-color: black;
+   border-radius: 3px;
+  }
+  .aprovado {
+   background-color: green;
+  }
+  .reprovado {
+   background-color: red;
+  }
+ </style>
+</head>
+<body>
+ <div class="content">
+  <div class="container">
+   <header>
+    <img src="./logo.png" alt="Capelo e Diploma.">
+    <p class="textT" style="font-size: 40px; font-weight: bold;">Calculadora de Médias</p>
+   </header>
+   <form id="form-atividade">
+    <input type="text" name="" id="nome-atividade" required placeholder="Nome da Atividade">
+    <input style="width: 25%;" type="number" name="" id="nota-atividade" required placeholder="Nota da Atividade" min="0" max="10">
+    <button type="submit">Adicionar+</button>
+   </form>
+   <table cellspacing="0">
+    <thead>
+     <tr>
+      <th>Nome da Atividade</th>
+      <th>Nota da Atividade</th>
+      <th>Aprovado?</th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>
+     </tr>
+    </tbody>
+    <tfoot>
+     <tr>
+      <td>Média Final</td>
+      <td id="mediaFinalValor">---</td>
+      <td id="mediaFinalResultado">---</td>
+     </tr>
+    </tfoot>
+   </table>
+  </div>
+ </div>
+ <script>
+  const form = document.getElementById('form-atividade');
+  let linhas = '';
+  const atividades = []
+  const notas = []
+  const spanAprovado = '<span class="resultadoAprovado">Aprovado</span>'
+  const spanReprovado = '<span class="resultadoReprovado">Reprovado</span>'
+  const notaMinima = parseFloat(prompt("Digite a nota mínima: "));
+
+  form.addEventListener('submit', function(e){
+   e.preventDefault();
+
+   adicionaLinha();
+   atualizaTabela();
+   atualizaMediaFinal();
+  })
+
+  function adicionaLinha(){
+   const inputNomeAtividade = document.getElementById('nome-atividade');
+   const inputNotaAtividade = document.getElementById('nota-atividade');
+
+   if(atividades.includes(inputNomeAtividade.value)){
+    alert(`A atividade: ${inputNomeAtividade.value}. já foi inserida.`)
+   }
+   else{
+    atividades.push(inputNomeAtividade.value);
+    notas.push(parseFloat(inputNotaAtividade.value));
+    let linha = '<tr>';
+    linha += `<td>${inputNomeAtividade.value}</td>`;
+    linha += `<td>${inputNotaAtividade.value}</td>`;
+    linha += `<td>${inputNotaAtividade.value >= notaMinima ? spanAprovado : spanReprovado}</td>`;
+    linha += '</tr>';
+    
+    linhas += linha;
+    inputNomeAtividade.value = '';
+    inputNotaAtividade.value = '';
+   }
+  }
+  function atualizaTabela(){
+   const corpoTabela = document.querySelector('tbody');
+   corpoTabela.innerHTML = linhas;
+  }
+  function atualizaMediaFinal(){
+   const mediaFinal = calculaMediaFinal();
+
+   document.getElementById('mediaFinalValor').innerHTML = mediaFinal;
+   document.getElementById('mediaFinalResultado').innerHTML = mediaFinal >= notaMinima ? spanAprovado : spanReprovado;
+  }
+  function calculaMediaFinal(){
+   let somaDasNotas = 0;
+
+   for (let i = 0; i < notas.length; i++){
+    somaDasNotas += notas[i];
+   }
+
+   return somaDasNotas / notas.length;
+  }
+ </script>
+</body>
+</html>
