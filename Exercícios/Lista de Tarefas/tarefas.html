@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Lista de Tarefas</title>
+ <style>
+  * {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+  }
+  body {
+   background-color: #202020;
+   color: rgb(225, 225, 225);
+   text-align: center;
+   margin: 10px;
+  }
+  ::placeholder {
+   text-align: center;
+  }
+  input, button {
+   background-color: rgb(225, 225, 225);
+  }
+  li:hover {
+   text-decoration: line-through;
+   cursor: pointer;
+  }
+  ul {
+   margin: 10px;
+  }
+  li {
+   margin: 3px;
+   display: flex;
+   justify-content: center;
+  }
+ </style>
+</head>
+<body>
+ <form>
+  <p style="font-size: xx-large;">Lista de Tarefas</p>
+  <input required id="nova_tarefa" type="text" placeholder="Tarefa">
+  <button type="submit" style="cursor: pointer;">Adicionar</button>
+  <button type="reset" onclick="window.location.reload(true)" title="Apagar Tarefas" style="background-color: #202020; cursor: pointer; color: rgb(225, 225, 225); border: none; font-size: large;">&#x274c</button>
+ </form>
+ <ul>
+ </ul>
+ <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+ <script>
+  $('form').on('submit', function(e){
+   e.preventDefault();
+   const NOVA_TAREFA = $('#nova_tarefa').val();
+   const NOVO_ITEM = $('<li onclick="style=`text-decoration: line-through; color: grey;`"></li>').text(NOVA_TAREFA);
+   $(NOVO_ITEM).appendTo('ul');
+  })
+</script>
+</body> 
+</html>
