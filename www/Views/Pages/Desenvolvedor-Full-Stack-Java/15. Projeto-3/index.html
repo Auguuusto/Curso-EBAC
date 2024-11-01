@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Restaurante</title>
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+ <style>
+  .body {
+   font-family: 'Roboto', 'sans-serif';
+  }
+  .navbar {
+   background-color: #e15f41;
+  }
+  .nav .nav-link.active {
+   background-color: #fff;
+   color: #e15f41;
+  }
+  .nav .nav-link, .navbar-brand, .navbar-brand:hover {
+   color: #fff;
+  }
+  .navbar-brand {
+   font-family: 'Pacifico', 'cursive';
+  }
+  ul li {
+   font-weight: bold;
+  }
+  .navbar-toggler {
+   background-color: #ffeae6;
+  }
+  .section-title {
+   font-family: 'Pacifico', 'cursive';
+  }
+  .section-title span {
+   color: #e15f41;
+  }
+  .row {
+   font-size: 13px;
+  }
+  #sobre {
+   background-color: #ffeae6;
+  }
+ </style>
+</head>
+<body>
+ <header class="navbar navbar-expand-lg sticky-op p-4" id="cabecalho">
+  <div class="container">
+   <h1 class="navbar-brand m-0 section-title">Restaurante</h1>
+   <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu-navegacao">
+    <span class="navbar-toggler-icon"></span>
+   </button>
+   <nav id="menu-navegacao" class="navbar-collapse collapse justify-content-end">
+    <ul class="nav nav-pills d-block d-md-flex">
+     <li class="nav-item">
+      <a class="nav-link fw-bold" href="#sobre">
+       <i class="bi bi-house-door mr-1"></i>
+       Sobre
+      </a>
+     </li>
+     <li class="nav-item">
+      <a class="nav-link fw-bold" href="#">
+       <i class="bi bi-calendar-check mr-1"></i>
+       Eventos
+      </a>
+     </li>
+     <li class="nav-item">
+      <a class="nav-link fw-bold" href="#">
+       <i class="bi bi-card-text mr-1"></i>
+       Cardápio
+      </a>
+     </li>
+     <li class="nav-item">
+      <a class="nav-link fw-bold" href="#">
+       <i class="bi bi-chat-left-text mr-1"></i>
+       Contato
+      </a>
+     </li>
+    </ul>
+   </nav>
+  </div>
+ </header>
+ <div data-bs-spy="scroll" data-bs-target="cabecalho">
+  <section id="sobre">
+   <div id="carousel" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+     <li data-target="#carousel" data-slide-to="0" class="active"></li>
+     <li data-target="#carousel" data-slide-to="1"></li>
+     <li data-target="#carousel" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+     <div class="carousel-item active" data-bs-interval="3000">
+      <img class="d-block w-100" src="./images/slides/slide1.png" alt="First slide">
+     </div>
+     <div class="carousel-item" data-bs-interval="3000">
+      <img class="d-block w-100" src="./images/slides/slide2.png" alt="Second slide">
+     </div>
+     <div class="carousel-item" data-bs-interval="3000">
+      <img class="d-block w-100" src="./images/slides/slide3.png" alt="Third slide">
+     </div>
+    </div>
+    <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
+     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+     <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
+     <span class="carousel-control-next-icon" aria-hidden="true"></span>
+     <span class="sr-only">Next</span>
+    </a>
+   </div>
+   <div class="pt-5 pb-5">
+    <div class="container">
+     <div class="row">
+      <div class="col-md-5">
+       <img src="./images/restaurante.jpg" alt="" class="d-block w-100 rounded">
+      </div>
+      <div class="col-md-7">
+       <h2 class="section-title">Sobre o <span>Restaurante</span></h2>
+       <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam error assumenda totam animi quia dolore eius velit saepe hic deserunt, dolorum soluta ipsa facere voluptatem atque illo eveniet delectus. Neque!
+       </p>
+       <h3 class="section-title">Sobre o <span>Espaço</span></h3>
+       <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquid, voluptas delectus? Libero dolor quis reprehenderit natus ipsam at sapiente dignissimos possimus! Ipsa, ipsum? Eaque esse expedita necessitatibus, assumenda velit enim?</p>
+       <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+       </ul>
+      </div>
+     </div>
+    </div>
+   </div>
+  </section>
+ </div>
+ <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+ <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
