@@ -1,15 +1,15 @@
 {
-  "name": "exercicio",
+  "name": "curso-ebac",
   "version": "1.0.0",
   "main": "index.js",
+  "devDependencies": {
+    "gulp": "^5.0.0"
+  },
   "scripts": {
-    "sass": "sass main.scss style.css --watch",
+    "gulp": "gulp",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
-  "description": "",
-  "devDependencies": {
-    "sass": "^1.81.0"
-  }
+  "description": ""
 }
