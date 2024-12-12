@@ -5,3 +5,10 @@ body {
  color: variables.$secondaryColor;
  text-align: center;
 }
+.carousel-item {
+ img {
+  width: auto;
+  height: 90vh;
+  margin: 0 auto;
+ }
+}

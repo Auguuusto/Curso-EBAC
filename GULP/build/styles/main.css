@@ -3,4 +3,10 @@ body {
   color: #fff;
   text-align: center;
 }
+
+.carousel-item img {
+  width: auto;
+  height: 90vh;
+  margin: 0 auto;
+}
 /*# sourceMappingURL=maps/main.css.map */
