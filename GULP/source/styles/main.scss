@@ -1,0 +1,7 @@
+@use 'variables';
+
+body {
+ background-color: variables.$primaryColor;
+ color: variables.$secondaryColor;
+ text-align: center;
+}
