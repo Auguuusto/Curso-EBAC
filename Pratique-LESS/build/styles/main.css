@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+ul {
+  list-style-type: none;
+}
+ul li {
+  text-decoration: none;
+}
+body {
+  background-color: #778beb;
+  color: #fff;
+}
+.container {
+  max-width: 960px;
+  width: 100%;
+  margin: 0 auto;
+  background-color: #546de5;
+}
+header {
+  background-color: #3a4fb6;
+  display: flex;
+  justify-content: space-between;
+}
+header .menu {
+  display: flex;
+}
